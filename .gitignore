@@ -1,0 +1,10 @@
+macHardId/icon.rc
+macHardId/macHardId.vcxproj.user
+macHardId/.vs/
+*.dll
+*.exe
+*.exp
+*.ilk
+*.lib
+*.pdb
+macHardId/obj/
