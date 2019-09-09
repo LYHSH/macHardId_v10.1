@@ -1,4 +1,6 @@
 ofxHardIdentification
 ofxImGui
 ofxMD5Convert
+ofxOsc
+ofxPoco
 ofxXmlSettings

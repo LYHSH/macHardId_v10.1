@@ -100,16 +100,18 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxOsc\libs;..\..\..\..\addons\ofxOsc\libs\oscpack;..\..\..\..\addons\ofxOsc\libs\oscpack\src;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\posix;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32;..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc;..\..\..\..\addons\ofxOsc\src;..\..\..\..\addons\ofxPoco\libs\poco\include;..\..\..\..\addons\ofxPoco\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PreprocessorDefinitions>OSC_HOST_LITTLE_ENDIAN</PreprocessorDefinitions>
+			<AdditionalOptions>-DPOCO_STATIC</AdditionalOptions>
 		</ClCompile>
 		<Link>
 			<GenerateDebugInformation>true</GenerateDebugInformation>
 			<SubSystem>Console</SubSystem>
 			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>%(AdditionalDependencies);PocoCryptomdd.lib;PocoDatamdd.lib;PocoDataSQLitemdd.lib;PocoFoundationmdd.lib;PocoJSONmdd.lib;PocoNetmdd.lib;PocoNetSSLmdd.lib;PocoPDFmdd.lib;PocoUtilmdd.lib;PocoXMLmdd.lib;PocoZipmdd.lib;iphlpapi.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\..\addons\ofxPoco\libs\poco\lib\vs\Win32\Debug;..\..\..\..\addons\ofxPoco</AdditionalLibraryDirectories>
 		</Link>
 		<PostBuildEvent />
 	</ItemDefinitionGroup>
@@ -120,17 +122,19 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxOsc\libs;..\..\..\..\addons\ofxOsc\libs\oscpack;..\..\..\..\addons\ofxOsc\libs\oscpack\src;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\posix;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32;..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc;..\..\..\..\addons\ofxOsc\src;..\..\..\..\addons\ofxPoco\libs\poco\include;..\..\..\..\addons\ofxPoco\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PreprocessorDefinitions>OSC_HOST_LITTLE_ENDIAN</PreprocessorDefinitions>
+			<AdditionalOptions>-DPOCO_STATIC</AdditionalOptions>
 		</ClCompile>
 		<Link>
 			<GenerateDebugInformation>true</GenerateDebugInformation>
 			<SubSystem>Console</SubSystem>
 			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>%(AdditionalDependencies);PocoCryptomdd.lib;PocoDatamdd.lib;PocoDataSQLitemdd.lib;PocoFoundationmdd.lib;PocoJSONmdd.lib;PocoNetmdd.lib;PocoNetSSLmdd.lib;PocoPDFmdd.lib;PocoUtilmdd.lib;PocoXMLmdd.lib;PocoZipmdd.lib;iphlpapi.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\..\addons\ofxPoco\libs\poco\lib\vs\x64\Debug;..\..\..\..\addons\ofxPoco</AdditionalLibraryDirectories>
 		</Link>
 		<PostBuildEvent />
 	</ItemDefinitionGroup>
@@ -140,10 +144,12 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxOsc\libs;..\..\..\..\addons\ofxOsc\libs\oscpack;..\..\..\..\addons\ofxOsc\libs\oscpack\src;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\posix;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32;..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc;..\..\..\..\addons\ofxOsc\src;..\..\..\..\addons\ofxPoco\libs\poco\include;..\..\..\..\addons\ofxPoco\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PreprocessorDefinitions>OSC_HOST_LITTLE_ENDIAN</PreprocessorDefinitions>
+			<AdditionalOptions>-DPOCO_STATIC</AdditionalOptions>
 		</ClCompile>
 		<Link>
 			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -152,8 +158,8 @@
 			<OptimizeReferences>true</OptimizeReferences>
 			<EnableCOMDATFolding>true</EnableCOMDATFolding>
 			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>%(AdditionalDependencies);PocoCryptomd.lib;PocoDatamd.lib;PocoDataSQLitemd.lib;PocoFoundationmd.lib;PocoJSONmd.lib;PocoNetmd.lib;PocoNetSSLmd.lib;PocoPDFmd.lib;PocoUtilmd.lib;PocoXMLmd.lib;PocoZipmd.lib;iphlpapi.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\..\addons\ofxPoco\libs\poco\lib\vs\Win32\Release;..\..\..\..\addons\ofxPoco</AdditionalLibraryDirectories>
 		</Link>
 		<PostBuildEvent />
 	</ItemDefinitionGroup>
@@ -163,9 +169,11 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\..\addons\ofxHardIdentification\src;..\..\..\..\addons\ofxImGui\libs;..\..\..\..\addons\ofxImGui\libs\imgui;..\..\..\..\addons\ofxImGui\libs\imgui\src;..\..\..\..\addons\ofxImGui\src;..\..\..\..\addons\ofxMD5Convert\src;..\..\..\..\addons\ofxOsc\libs;..\..\..\..\addons\ofxOsc\libs\oscpack;..\..\..\..\addons\ofxOsc\libs\oscpack\src;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\posix;..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32;..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc;..\..\..\..\addons\ofxOsc\src;..\..\..\..\addons\ofxPoco\libs\poco\include;..\..\..\..\addons\ofxPoco\src;..\..\..\..\addons\ofxXmlSettings\libs;..\..\..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
+			<PreprocessorDefinitions>OSC_HOST_LITTLE_ENDIAN</PreprocessorDefinitions>
+			<AdditionalOptions>-DPOCO_STATIC</AdditionalOptions>
 		</ClCompile>
 		<Link>
 			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -174,8 +182,8 @@
 			<OptimizeReferences>true</OptimizeReferences>
 			<EnableCOMDATFolding>true</EnableCOMDATFolding>
 			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>%(AdditionalDependencies);PocoCryptomd.lib;PocoDatamd.lib;PocoDataSQLitemd.lib;PocoFoundationmd.lib;PocoJSONmd.lib;PocoNetmd.lib;PocoNetSSLmd.lib;PocoPDFmd.lib;PocoUtilmd.lib;PocoXMLmd.lib;PocoZipmd.lib;iphlpapi.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\..\addons\ofxPoco\libs\poco\lib\vs\x64\Release;..\..\..\..\addons\ofxPoco</AdditionalLibraryDirectories>
 		</Link>
 		<PostBuildEvent />
 	</ItemDefinitionGroup>
@@ -202,6 +210,19 @@
 		<ClCompile Include="..\..\..\..\addons\ofxMD5Convert\src\md5Converter.cpp" />
 		<ClCompile Include="..\..\..\..\addons\ofxMD5Convert\src\nullConverter.cpp" />
 		<ClCompile Include="..\..\..\..\addons\ofxMD5Convert\src\timeSynMd5Converter.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\src\ofxOscBundle.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\src\ofxOscMessage.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\src\ofxOscParameterSync.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\src\ofxOscReceiver.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\src\ofxOscSender.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32\NetworkingUtils.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\win32\UdpSocket.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.cpp" />
+		<ClCompile Include="..\..\..\..\addons\ofxPoco\src\ofxXmlPoco.cpp" />
 		<ClCompile Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
 		<ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
 		<ClCompile Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
@@ -234,6 +255,27 @@
 		<ClInclude Include="..\..\..\..\addons\ofxMD5Convert\src\md5Converter.h" />
 		<ClInclude Include="..\..\..\..\addons\ofxMD5Convert\src\nullConverter.h" />
 		<ClInclude Include="..\..\..\..\addons\ofxMD5Convert\src\timeSynMd5Converter.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOsc.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscArg.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscBundle.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscMessage.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscParameterSync.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscReceiver.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\src\ofxOscSender.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\IpEndpointName.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\NetworkingUtils.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\PacketListener.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\TimerListener.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\ip\UdpSocket.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\MessageMappingOscPacketListener.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscException.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscHostEndianness.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscOutboundPacketStream.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPacketListener.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscPrintReceivedElements.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscReceivedElements.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxOsc\libs\oscpack\src\osc\OscTypes.h" />
+		<ClInclude Include="..\..\..\..\addons\ofxPoco\src\ofxXmlPoco.h" />
 		<ClInclude Include="..\..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
 		<ClInclude Include="..\..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
 	</ItemGroup>
