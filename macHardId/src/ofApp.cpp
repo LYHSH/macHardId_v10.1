@@ -27,6 +27,21 @@ void ofApp::draw(){
 	}
 	ImGui::NewLine();
 	ImGui::Separator();
+	if (ImGui::Button("load", ofVec2f(200, 100)))
+	{
+		
+		ofFileDialogResult res = ofSystemLoadDialog();
+		cout << res.getPath() << endl;
+
+		ofFile file(res.getPath());
+		if (file.getExtension() == "xml")
+		{
+			files.clear();
+			files.push_back(file);
+		}
+
+	}
+	ImGui::Separator();
 	if (ImGui::Button("generate",ofVec2f(200,100)))
 	{
 		if (files.size())
@@ -51,6 +66,26 @@ void ofApp::draw(){
 		files.clear();
 	}
 	gui.end();
+
+
+	{
+		stringstream sss;
+		for (int i = 0; i < files.size(); i++)
+		{
+			auto & file = files[i];
+			sss << file.getAbsolutePath() << endl;
+		}
+		ofPushMatrix();
+		ofTranslate(512, 0);
+		ofPushStyle();
+		ofSetColor(0);
+		ofDrawRectangle(0, 0, ofGetWidth()-512, ofGetHeight());
+
+		ofSetColor(255);
+		ofDrawBitmapString(sss.str(), 20, 20);
+		ofPopStyle();
+		ofPopMatrix();
+	}
 }
 
 //--------------------------------------------------------------
@@ -105,7 +140,7 @@ void ofApp::gotMessage(ofMessage msg){
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
-	files.clear();
+	
 	auto & strs = dragInfo.files;
 	for (int i = 0; i < strs.size(); i++)
 	{
@@ -113,6 +148,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 		ofFile file(strs[i]);
 		if (file.getExtension() == "xml")
 		{
+			files.clear();
 			files.push_back(file);
 		}
 	}
